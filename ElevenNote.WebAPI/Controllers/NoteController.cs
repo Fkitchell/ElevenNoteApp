@@ -33,19 +33,31 @@ namespace ElevenNote.WebAPI.Controllers
             var notes = noteService.GetNoteById(id);
             return Ok(notes);
         }
-    
+
 
         public IHttpActionResult Post(NoteCreate note)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
-            
+
             var service = CreateNoteService();
 
             if (!service.CreateNote(note))
                 return InternalServerError();
             return Ok();
         }
-    }
 
+        public IHttpActionResult Put(NoteEdit note)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var service = CreateNoteService();
+
+            if (!service.Updatenote(note))
+                return InternalServerError();
+
+            return Ok();
+        }
+    }
 }
