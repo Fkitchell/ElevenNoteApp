@@ -57,8 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CategoryService.cs" />
-    <Compile Include="Category\CategoryDelete.cs" />
+    <Compile Include="Category\CategoryListItem.cs" />
     <Compile Include="Category\CategoryDetail.cs" />
     <Compile Include="Category\CategoryCreate.cs" />
     <Compile Include="Category\CategoryEdit.cs" />
