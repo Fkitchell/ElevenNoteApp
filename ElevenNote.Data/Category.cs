@@ -13,7 +13,7 @@ namespace ElevenNote.Data
         public string CategoryTitle { get; set; }
         [Required]
         public Guid OwnerId { get; set; }
-        [Required]
+        [Key]
         public int CategoryId { get; set; }
 
     }
